@@ -12,9 +12,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class ContactController {
 
-    @RequestMapping("/{area}/contacts")
+    @RequestMapping("/index/{area}")
     public String index(Model model, @PathVariable("area") String areapath){
     	model.addAttribute("area",areapath);
-        return "contacts";
+        return "index";
     }
 }
