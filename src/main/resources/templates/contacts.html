@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta content="MateoQuintero" name="author">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Contacts</title>
+  <link href="../css/style.css" rel="stylesheet">
+  <link href="../css/normalize.css" rel="stylesheet">
+</head>
+<body>
+
+<header>
+  <nav>
+    <h1  style="margin-left: 10%;"th:text = "${area}+' Contacts'" ></h1>
+  </nav>
+</header>
+<div class="upper-container">
+  <p><b>Nombre: </b></p>
+  <input id="author" placeholder="Digite Nombre" type="text">
+  <button onclick="app.getNameAuthorBlueprints()">Search Contact</button>
+</div>
+<div class="principal-container">
+  <div class="contenedor-izq">
+    <div class="contenedor-izq__nombre">
+      <a class="author-name" id="author-name">Contacts:</a>
+    </div>
+    <div class="conenedor-izq__table">
+      <table class="table-blueprints" id="table-blueprints">
+        <thead>
+        <tr>
+          <th>NAME</th>
+          <th>EMAIL</th>
+          <th>CELLPHONE</th>
+          <th>CHAT</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+      </table>
+      
+    </div>
+  </div>
+</div>
+</body>
+</html>
