@@ -1,0 +1,155 @@
+<!DOCTYPE html >
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Yellow Company</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        text-align: left;
+        font-size: 13px;
+        color: #000000;
+        background: #e0c400;
+        background-image:url(static/images/background.jpg);
+        background-repeat:repeat-x;
+    }
+    *
+    {
+        margin: 0 auto 0 auto;
+        text-align:left;}
+
+    #container
+    {
+        display: block;
+        height:auto;
+        position: relative;
+        width: 750px;
+        background: #ffffff;
+        background-image:url(static/images/background.jpg);
+        background-repeat:repeat-y;
+        padding-left:17px;
+        padding-right:17px;
+        overflow:hidden;
+    }
+
+    #links
+    {
+        display:block;
+        float:right;
+        margin-top:25px;
+        margin-right:10px;
+    }
+
+    #links a, #links a:visited
+    {
+        font-size:16px;
+        font-weight:bold;
+        margin-left:4px;
+        margin-right:4px;
+        color: #e0c400;
+        text-decoration:none;
+    }
+
+    #links a:hover
+    {
+        border-bottom:dotted 1px #e0c400;
+    }
+
+    #header
+    {
+        height:60px;
+
+    }
+
+    #header h1
+    {
+        margin-top:15px;
+        margin-left:10px;
+        font-size:33px;
+        color: #171615;
+        float:left;
+    }
+
+    .off
+    {
+        color:#e0c400;
+    }
+
+    .picture
+    {
+        background-image:url(static/images/imagebackground.jpg);
+        background-repeat:repeat-x;
+        background-position:bottom;
+        padding-bottom:8px;
+        margin-top:22px;
+    }
+
+
+    .contenttext h2
+    {
+        color:#e0c400;
+        font-size:24px;
+        margin-bottom:10px;
+
+    }
+
+    .contenttext
+    {
+        padding-left:10px;
+        padding-right:10px;
+    }
+
+
+    #footer
+    {
+        font-size:12px;
+        color:#e0c400;
+        margin-top:18px;
+        width:750px;
+        text-align:center;
+    }
+    #footer a, #footer a:visited
+    {
+        text-align:center;
+        color:#e0c400;
+        text-decoration:none;
+    }
+
+    html, body {
+        text-align: center;
+    }
+
+    p {text-align: left;}
+
+
+</style>
+<body>
+<div id="container">
+    <div id="header">
+        <h1><span class="off">Yellow</span>Company</h1>
+        <div id="links">
+            <a href="login">Log out</a>
+        </div>
+    </div>
+    <div id="content">
+        <img class="picture" src="images/image1.png"/>
+        <div class="contenttext">
+            <h2>INGRESA A CHAT EMPESARIAL</h2>
+            <select name="Areas" style="width: 250px">
+                <option value="1">Seguridad</option>
+                <option value="2">Negocio</option>
+                <option value="3">Inventario</option>
+            </select>
+        </div>
+        <img class="picture" src="images/image2.jpg" />
+        <div class="contenttext">
+            <h2>INGRESA A MURO EMPESARIAL</h2>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>
