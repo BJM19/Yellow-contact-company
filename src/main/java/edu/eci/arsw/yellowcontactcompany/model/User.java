@@ -19,7 +19,7 @@ public class User {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name = "auth_user_id")
+	@Column(name = "user_id")
 	private Integer id;
 
 	@Column(name = "first_name")
@@ -34,15 +34,9 @@ public class User {
 	@Column(name = "password")
 	private String password;
 
-	@Column(name = "mobile")
-	private String mobile;
-
 	@Column(name = "status")
 	private String status;
 
-	@ManyToMany(cascade = CascadeType.ALL)
-	@JoinTable(name = "auth_user_role", joinColumns = @JoinColumn(name = "auth_user_id"), inverseJoinColumns = @JoinColumn(name = "auth_role_id"))
-	private Set<Role> roles;
 
 	public int getId() {
 		return id;
@@ -84,14 +78,6 @@ public class User {
 		this.password = password;
 	}
 
-	public String getMobile() {
-		return mobile;
-	}
-
-	public void setMobile(String mobile) {
-		this.mobile = mobile;
-	}
-
 	public String getStatus() {
 		return status;
 	}
@@ -100,13 +86,7 @@ public class User {
 		this.status = status;
 	}
 
-	public Set<Role> getRoles() {
-		return roles;
-	}
 
-	public void setRoles(Set<Role> roles) {
-		this.roles = roles;
-	}
 	
 
 }

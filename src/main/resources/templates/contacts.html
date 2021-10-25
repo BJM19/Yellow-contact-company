@@ -9,7 +9,14 @@
   <link href="../css/normalize.css" rel="stylesheet">
 </head>
 <body>
-
+<style>
+  .conenedor-izq__table a
+  {
+    color:#e0c400;
+    font-size:24px;
+    margin-bottom:10px;
+  }
+</style>
 <header>
   <nav>
     <h1  style="margin-left: 10%;"th:text = "${area}+' Contacts'" ></h1>
@@ -29,16 +36,19 @@
       <table class="table-blueprints" id="table-blueprints">
         <thead>
         <tr>
+          <th>ID</th>
           <th>NAME</th>
+          <th>LAST NAME</th>
           <th>EMAIL</th>
           <th>CELLPHONE</th>
-          <th>CHAT</th>
+          <th>STATUS</th>
         </tr>
         </thead>
         <tbody>
 
         </tbody>
       </table>
+      <button onclick="location.href='https://rest-chat.herokuapp.com/chat.html'" style="font-size: 30px;width: 94%;background-color: yellow;color: darkred;">Join Chat </button>
       
     </div>
   </div>

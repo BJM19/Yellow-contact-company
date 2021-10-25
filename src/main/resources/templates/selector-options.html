@@ -4,6 +4,19 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link rel="stylesheet" type="text/css" href="style.css" />
     <title>Yellow Company</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+
+    $(document).ready(function(){
+    $('a[href^="seguridad"]').each(function(){
+        var e = document.getElementById("areas");
+        var area = e.value;
+        var oldUrl = $(this).attr("href"); // Get current url
+        var newUrl = oldUrl.replace("seguridad", area); // Create new url
+        $(this).attr("href", newUrl); // Set herf value
+    });
+    });
+    </script>
 </head>
 <style>
     body {
@@ -95,6 +108,12 @@
         margin-bottom:10px;
 
     }
+    .contenttext a
+    {
+        color:#e0c400;
+        font-size:24px;
+        margin-bottom:10px;
+    }
 
     .contenttext
     {
@@ -137,11 +156,12 @@
     <div id="content">
         <img class="picture" src="images/image1.png"/>
         <div class="contenttext">
-            <h2>INGRESA A CHAT EMPESARIAL</h2>
-            <select name="Areas" style="width: 250px">
-                <option value="1">Seguridad</option>
-                <option value="2">Negocio</option>
-                <option value="3">Inventario</option>
+            <a href=contacts/seguridad>INGRESA A CHAT EMPESARIAL</a>
+
+            <select id="areas" style="width: 250px">
+                <option th:value="1">Seguridad</option>
+                <option th:value="2">Negocio</option>
+                <option th:value="3">Inventario</option>
             </select>
         </div>
         <img class="picture" src="images/image2.jpg" />
@@ -152,4 +172,5 @@
     </div>
 </div>
 </body>
+
 </html>

@@ -1,11 +1,11 @@
 package edu.eci.arsw.yellowcontactcompany.repository;
-import org.springframework.data.repository.CrudRepository;
-import org.springframework.stereotype.Repository;
+import org.springframework.data.jpa.repository.JpaRepository;
+
 
 import edu.eci.arsw.yellowcontactcompany.model.User;
 
 
-@Repository
-public interface UserRepository extends CrudRepository<User, Integer> {
+
+public interface UserRepository extends JpaRepository<User, Integer> {
 
 }

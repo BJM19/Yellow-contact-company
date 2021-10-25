@@ -6,8 +6,8 @@ import org.springframework.stereotype.Service;
 import edu.eci.arsw.yellowcontactcompany.repository.UserRepository;
 @Service
 public class UserServiceImpl implements UserService {
-	@Autowired
-    private UserRepository urepository;
+	/*@Autowired
+    private UserRepository urepository;*/
 	
 	
 	
