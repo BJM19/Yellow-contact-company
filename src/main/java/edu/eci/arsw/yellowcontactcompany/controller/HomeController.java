@@ -49,4 +49,9 @@ public class HomeController {
     
     
 
+    @RequestMapping(value = "/selector-options", method = RequestMethod.GET)
+    public String selector(Locale locale, Model model) {
+        return "selector-options";
+    }
+
 }
