@@ -17,6 +17,9 @@
     });
     });
     </script>
+    
+    
+    
 </head>
 <style>
     body {
@@ -156,8 +159,7 @@
     <div id="content">
         <img class="picture" src="images/image1.png"/>
         <div class="contenttext">
-            <a href=contacts/seguridad>INGRESA A CHAT EMPESARIAL</a>
-
+        <a href="#" onclick="selectRoomChat()">INGRESA A CHAT EMPESARIAL</a>
             <select id="areas" style="width: 250px">
                 <option th:value="1">Seguridad</option>
                 <option th:value="2">Negocio</option>
@@ -172,5 +174,15 @@
     </div>
 </div>
 </body>
+<script >
+function selectRoomChat() {
+    var option_user_selection=document.getElementById("areas");
+	var areaselected = option_user_selection.options[ option_user_selection.selectedIndex ].text
+	console.log(areaselected)
+	var URL = 'contacts'+'/'+areaselected.toLowerCase();
+	console.log(URL)
+	window.location.href=URL
+}
+</script>
 
 </html>
