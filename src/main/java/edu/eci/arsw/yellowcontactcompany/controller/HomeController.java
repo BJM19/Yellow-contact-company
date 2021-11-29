@@ -47,11 +47,23 @@ public class HomeController {
     	return null;
     }
     
-    
-
+   
     @RequestMapping(value = "/selector-options", method = RequestMethod.GET)
     public String selector(Locale locale, Model model) {
         return "selector-options";
+    }
+    
+    @RequestMapping(value = "/about", method = RequestMethod.GET)
+    public String about(Locale locale, Model model) {
+        return "about";
+    }
+    @RequestMapping(value = "/why", method = RequestMethod.GET)
+    public String why(Locale locale, Model model) {
+        return "why";
+    }
+    @RequestMapping(value = "/contactus", method = RequestMethod.GET)
+    public String contactus(Locale locale, Model model) {
+        return "contactus";
     }
 
 }
