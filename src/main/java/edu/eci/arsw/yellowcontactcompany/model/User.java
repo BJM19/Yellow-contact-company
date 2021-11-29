@@ -37,6 +37,9 @@ public class User {
 	@Column(name = "status")
 	private String status;
 
+	@Column(name = "area")
+	private String area;
+
 
 	public int getId() {
 		return id;
@@ -86,7 +89,12 @@ public class User {
 		this.status = status;
 	}
 
+	public String getArea() {
+		return area;
+	}
 
-	
+	public void setArea(String area) {
+		this.area = area;
+	}	
 
 }

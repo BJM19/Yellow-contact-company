@@ -35,17 +35,24 @@
     <div class="conenedor-izq__table">
       <table class="table-blueprints" id="table-blueprints">
         <thead>
-        <tr>
+        <tr >
           <th>ID</th>
           <th>NAME</th>
           <th>LAST NAME</th>
           <th>EMAIL</th>
-          <th>CELLPHONE</th>
+          <!-- <th>CELLPHONE</th> -->
           <th>STATUS</th>
         </tr>
+
         </thead>
         <tbody>
-
+          <tr th:each="users: ${users}">
+            <td th:text="${users.id}"></td>
+            <td th:text="${users.name}"></td>
+            <td th:text="${users.lastName}"></td>
+            <td th:text="${users.email}"></td>
+            <td th:text="${users.status}"></td>
+          </tr>
         </tbody>
       </table>
       <button onclick="location.href='https://rest-chat.herokuapp.com/chat.html'" style="font-size: 30px;width: 94%;background-color: yellow;color: darkred;">Join Chat </button>
