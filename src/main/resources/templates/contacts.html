@@ -10,53 +10,149 @@
 </head>
 <body>
 <style>
+  body {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    font-size: 13px;
+    color: #000000;
+    background: #e0c400;
+    background-image:url(static/images/background.jpg);
+    background-repeat:repeat-x;
+  }
+  *
+  {
+    margin: 0 auto 0 auto;
+    text-align:left;}
+  #content{
+    margin-bottom: 20px;
+  }
+  #container
+  {
+    display: block;
+    height:auto;
+    position: relative;
+    width: 750px;
+    background: #ffffff;
+    background-image:url(static/images/background.jpg);
+    background-repeat:repeat-y;
+    padding-left:17px;
+    padding-right:17px;
+    overflow:hidden;
+  }#links
+   {
+     display:block;
+     float:right;
+     margin-top:25px;
+     margin-right:10px;
+   }
+
+  #links a, #links a:visited
+  {
+    font-size:16px;
+    font-weight:bold;
+    margin-left:4px;
+    margin-right:4px;
+    color: #e0c400;
+    text-decoration:none;
+  }
+
+  #links a:hover
+  {
+    border-bottom:dotted 1px #e0c400;
+  }
+
+  #header
+  {
+    height:60px;
+
+  }
+
+  #header h1
+  {
+    margin-top:15px;
+    margin-left:10px;
+    font-size:33px;
+    color: #171615;
+    float:left;
+  }
+
+  .off
+  {
+    color:#e0c400;
+  }.contenttext h2
+   {
+     color:#e0c400;
+     font-size:24px;
+     margin-bottom:10px;
+
+   }#footer a, #footer a:visited
+    {
+      text-align:center;
+      color:#e0c400;
+      text-decoration:none;
+    }
+
+  html, body {
+    text-align: center;
+  }
+
+  p {
+    text-align: left;
+    font-size: 20px;
+  }
   .conenedor-izq__table a
   {
     color:#e0c400;
     font-size:24px;
     margin-bottom:10px;
   }
-</style>
-<header>
-  <nav>
-    <h1  style="margin-left: 10%;"th:text = "${area}+' Contacts'" ></h1>
-  </nav>
-</header>
-<div class="upper-container">
-  <p><b>Nombre: </b></p>
-  <input id="author" placeholder="Digite Nombre" type="text">
-  <button onclick="app.getNameAuthorBlueprints()">Search Contact</button>
-</div>
-<div class="principal-container">
-  <div class="contenedor-izq">
-    <div class="contenedor-izq__nombre">
-      <a class="author-name" id="author-name">Contacts:</a>
-    </div>
-    <div class="conenedor-izq__table">
-      <table class="table-blueprints" id="table-blueprints">
-        <thead>
-        <tr >
-          <th>ID</th>
-          <th>NAME</th>
-          <th>LAST NAME</th>
-          <th>EMAIL</th>
-          <!-- <th>CELLPHONE</th> -->
-          <th>STATUS</th>
-        </tr>
 
-        </thead>
-        <tbody>
-          <tr th:each="users: ${users}">
-            <td th:text="${users.id}"></td>
-            <td th:text="${users.name}"></td>
-            <td th:text="${users.lastName}"></td>
-            <td th:text="${users.email}"></td>
-            <td th:text="${users.status}"></td>
+</style>
+
+<div id="container">
+  <header>
+    <nav>
+      <h1  style="margin-left: 10%;"th:text = "${area}+' Contacts'" ></h1>
+    </nav>
+  </header>
+  <div class="upper-container">
+    <p><b>Nombre: </b></p>
+    <input id="author" placeholder="Digite Nombre" type="text">
+    <button onclick="app.getNameAuthorBlueprints()">Search Contact</button>
+  </div>
+  <div class="principal-container">
+    <div class="contenedor-izq">
+      <div class="contenedor-izq__nombre">
+        <a class="author-name" id="author-name">Contacts:</a>
+      </div>
+      <div class="conenedor-izq__table">
+        <table class="table-blueprints" id="table-blueprints">
+          <thead>
+          <tr >
+            <th>ID</th>
+            <th>NAME</th>
+            <th>LAST NAME</th>
+            <th>EMAIL</th>
+            <!-- <th>CELLPHONE</th> -->
+            <th>STATUS</th>
           </tr>
-        </tbody>
-      </table>
-      <button onclick="location.href='https://rest-chat.herokuapp.com/chat.html'" style="font-size: 30px;width: 94%;background-color: yellow;color: darkred;">Join Chat </button>
-      
+
+          </thead>
+          <tbody>
+            <tr th:each="users: ${users}">
+              <td th:text="${users.id}"></td>
+              <td th:text="${users.name}"></td>
+              <td th:text="${users.lastName}"></td>
+              <td th:text="${users.email}"></td>
+              <td th:text="${users.status}"></td>
+            </tr>
+          </tbody>
+        </table>
+        </div>
+      <div class="upper-container">
+      <button >Join Chat</button>
+      </div>
     </div>
   </div>
 </div>
