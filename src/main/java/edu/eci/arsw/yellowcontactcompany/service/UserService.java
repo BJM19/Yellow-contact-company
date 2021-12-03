@@ -8,4 +8,6 @@ public interface UserService {
 
   public List<User> findUserByArea(String area);
 
+  public boolean findUserLogin(String email, String password);
+
 }

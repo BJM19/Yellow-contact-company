@@ -8,5 +8,7 @@ public interface UserDao {
 
     public List<User> findAll();
 
-    public List<User> findByArea(String area);  
+    public List<User> findByArea(String area);
+
+    public User findByEmail(String email);
 }

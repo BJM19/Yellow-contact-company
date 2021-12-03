@@ -21,6 +21,19 @@ public class UserServiceImpl implements UserService {
         return users;
     }
 
+    @Override
+    public boolean findUserLogin(String email, String password) {
+        User user = userDao.findByEmail(email);
+        boolean booleanResult = false;
+        if (user != null) {
+
+            if (user.getPassword().equals(password)){
+                booleanResult = true;
+            }
+        }
+        return booleanResult;
+    }
+
 	/*@Autowired
     private UserRepository urepository;*/
 	
