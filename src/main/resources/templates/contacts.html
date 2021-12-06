@@ -157,15 +157,30 @@
   </div>
 </div>
 <script type="text/javascript">
-  $(window).on('load', function() {
-    // Confirm that cookie does not exist
-    if (document.cookie != 'nombre=logeadoNea' || null) {
-      // Re-direct to this page
-      console.log('No encontro cookie');
-      window.location = "login";
-    }
-    console.log("encontro cookie")
-  });
+    $(window).on('load', function() {
+    let name = 'nombre=logeadoNea';
+    let value=false;
+   	  let ca = document.cookie.split(';');
+   	  for(let i = 0; i < ca.length; i++) {
+   	    let c = ca[i];
+   	    while (c.charAt(0) == ' ') {
+   	      c = c.substring(1);
+   	    }
+   	    if (c==name) {
+   	    	value=true;
+   	    	break
+   	    }
+   	    else{
+   	    value=false;
+   	    }
+   	  }
+   	  if (value==true){
+   		  console.log('puede ingresar aprobado');
+   	  }else{
+   		console.log('no encontre cookie valida');
+   		window.location ="login";
+   	  }  		  
+    });
 </script>
 <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
 </body>
