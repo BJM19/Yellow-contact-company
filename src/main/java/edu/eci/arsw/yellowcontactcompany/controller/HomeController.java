@@ -44,6 +44,10 @@ public class HomeController {
     public String wall(Model model) {
         return "wall";
     }
+    @RequestMapping(value = "/newPublication", method = RequestMethod.GET)
+    public String wall_publi(Model model) {
+        return "wall-publi";
+    }
     
     @RequestMapping(value = "/register", method = RequestMethod.GET)
     public String register(Locale locale, Model model) {

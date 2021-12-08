@@ -1,10 +1,14 @@
-$(document).ready(function() {
+	$(document).ready(function() {
     $("#InputForm").submit(function(event) {
         event.preventDefault();
         send();
     });
 
 });
+
+function setcookie(cname, cvalue) {
+  document.cookie = cname + "=" + cvalue + ";";
+}
 
 function send() {
         var login = $("#InputForm input[name='login']").val();
@@ -22,6 +26,7 @@ function send() {
                 console.log(msg);
                 if (msg == true){
                     document.cookie = "nombre=logeadoNea"
+					setcookie("nombre2",login)
                     window.location.href = "selector-options"
                 }
                 else {
