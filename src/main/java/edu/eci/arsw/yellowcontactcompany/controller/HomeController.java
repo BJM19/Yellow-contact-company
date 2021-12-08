@@ -39,6 +39,11 @@ public class HomeController {
     public String login(Locale locale, Model model) {
         return "login";
     }
+
+    @RequestMapping(value = "/wall", method = RequestMethod.GET)
+    public String wall(Model model) {
+        return "wall";
+    }
     
     @RequestMapping(value = "/register", method = RequestMethod.GET)
     public String register(Locale locale, Model model) {
