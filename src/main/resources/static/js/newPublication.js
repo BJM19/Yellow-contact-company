@@ -20,7 +20,7 @@ function publicPost(valor) {
         $.ajax({
             type: 'POST',
             datatype : "json",
-            url: 'http://localhost:8090/public/addpost/'+valor,
+            url: 'https://rest-wall.herokuapp.com/public/addpost/'+valor,
             data:
                 {
                 'content': content,

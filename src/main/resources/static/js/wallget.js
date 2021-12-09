@@ -5,7 +5,7 @@ $(document).ready(function() {
 
 function wallinfo() {
         $.ajax({  
-                url: 'http://localhost:8090/public/posts/',  
+                url: 'https://rest-wall.herokuapp.com/public/posts/',
                 dataType: "json",  
                 method: 'post',  
                 success: function (data) { 

@@ -299,6 +299,38 @@
     </div>
 </div>
 <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script type="text/javascript">
+    $(window).on('load', function() {
+        let name = 'nombre=logeadoNea';
+        console.log(name);
+        let value=false;
+        let ca = document.cookie.split(';');
+        for(let i = 0; i < ca.length; i++) {
+            let c = ca[i];
+            while (c.charAt(0) == ' ') {
+                c = c.substring(1);
+                console.log(c);
+            }
+            if (c==name) {
+                console.log("encontro cookie");
+                value=true;
+                break
+            }
+            else{
+                console.log('No encontro cookie');
+                value=false;
+            }
+        }
+        if (value==true){
+            console.log('puede ingresar aprobado');
+            window.location ="selector-options";
+        }else{
+            console.log('no encontre cookie valida');
+
+        }
+    });
+</script>
+
 <script src="js/sendlogin.js" type="text/javascript"></script>
 </body>
 </html>  

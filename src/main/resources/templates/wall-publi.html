@@ -96,7 +96,7 @@
   </ul>
   <br>
   <br>
-  <button style="background-color: black;color: white;width: 30%;height: 52px;font-size: 30px;margin-left: 38%;border-radius: 20%;">VER TODAS LAS PUBLICACIONES</button><br><br> <br> <br> <br> 
+  <button onclick="location.href='wall'" style="background-color: black;color: white;width: 30%;height: 52px;font-size: 30px;margin-left: 38%;border-radius: 20%;">VER TODAS LAS PUBLICACIONES</button><br><br> <br> <br> <br>
 
   <div class="container" style="
 ">
@@ -143,6 +143,37 @@
 <script src="vendor/select2/select2.min.js"></script>
 <!--===============================================================================================-->
 <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script type="text/javascript">
+  $(window).on('load', function() {
+    let name = 'nombre=logeadoNea';
+    console.log(name);
+    let value=false;
+    let ca = document.cookie.split(';');
+    for(let i = 0; i < ca.length; i++) {
+      let c = ca[i];
+      while (c.charAt(0) == ' ') {
+        c = c.substring(1);
+        console.log(c);
+      }
+      if (c==name) {
+        console.log("encontro cookie");
+        value=true;
+        break
+      }
+      else{
+        console.log('No encontro cookie');
+        value=false;
+      }
+    }
+    if (value==true){
+      console.log('puede ingresar aprobado');
+    }else{
+      console.log('no encontre cookie valida');
+      window.location ="login";
+    }
+  });
+</script>
+
 <script src="js/newPublication.js" type="text/javascript"></script>
 </body>
 </html>

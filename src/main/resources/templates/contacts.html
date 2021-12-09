@@ -113,7 +113,7 @@
 <div id="container">
   <header>
     <nav>
-      <h1  style="margin-left: 10%;"th:text = "${area}+' Contacts'" ></h1>
+      <h1  style="margin-left: 10%; background: #171615; color: white; width: 40vw; height: 5vh"th:text = "${area}+' Contacts'" ></h1>
     </nav>
   </header>
   <div class="upper-container">
@@ -151,7 +151,8 @@
         </table>
         </div>
       <div class="upper-container">
-      <button >Join Chat</button>
+        <button onclick="location.href='https://rest-chat.herokuapp.com/chat.html'"  >Join Chat</button>
+        <button onclick="location.href='../selector-options'" >Volver</button>
       </div>
     </div>
   </div>
