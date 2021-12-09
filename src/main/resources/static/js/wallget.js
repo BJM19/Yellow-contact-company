@@ -18,4 +18,6 @@ function wallinfo() {
                             + '</td></tr>');  
         });
 }});
+
 }
+setInterval(wallinfo, 30000);
